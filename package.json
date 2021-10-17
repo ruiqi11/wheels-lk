@@ -1,0 +1,54 @@
+{
+  "name": "wheels-lk",
+  "version": "0.3.3",
+  "description": "这是一个 UI 框架",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx parcel index.html --no-cache",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "serve": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "commit": "yarn build && yarn deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruiqi11/wheels-ls.git"
+  },
+  "keywords": [
+    "vue，ui"
+  ],
+  "author": "Zhou Yuanda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruiqi11/wheels-ls/issues"
+  },
+  "homepage": "https://github.com/ruiqi11/wheels-ls#readme",
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "sass-loader": "^8.0.2",
+    "svg": "^0.1.0",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "gh-pages": "^3.2.3",
+    "karma": "^6.3.4",
+    "karma-chai": "^0.1.0",
+    "karma-chai-spies": "^0.1.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sinon-chai": "^2.0.2",
+    "mocha": "^9.0.2",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.26.3",
+    "sinon": "^11.1.1",
+    "sinon-chai": "^3.7.0",
+    "vuepress": "^1.8.2"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
